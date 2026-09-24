@@ -1,0 +1,108 @@
+@import url(fonts.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* 
+body {
+    text-align: center;
+} */
+
+.container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ****** */
+
+.header {
+    background: url(../image/Rectangle\ 1.png) no-repeat center /cover;
+    height: 100vh;
+}
+
+.header-nav__minibox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+.header-minibox__list {
+    display: flex;
+    column-gap: 20px;
+}
+
+.header-minibox__link {
+    font-family: "MM";
+    font-size: 14px;
+    color: white;
+}
+
+.header-minibox__link:hover {
+    font-family: "MM";
+    font-size: 14px;
+    color: yellow;
+}
+
+/* nav stop ****** */
+
+.header-box__left {
+    position: relative;
+    z-index: 2;
+    padding-top: 155px;
+}
+
+.header-left__title {
+    max-width: 834px;
+    width: 100%;
+    font-family: "MOB";
+    font-size: 72px;
+    color: white;
+    margin-bottom: 60px;
+}
+
+.header-left__span {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 200px;
+    left: 550px;
+    z-index: -2;
+    font-family: "MOR";
+    font-size: 64px;
+    color: yellow;
+}
+
+.header-left__wspan {
+    font-family: "MB";
+    color: #FFFFFF;
+    text-shadow: 0 0 5px #FFD700;
+    font-size: 96px;
+    color: transparent;
+    background: url('background.jpg') no-repeat center center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* h1 stop ****** */
+
+.header-left__btn {
+    width: max-content;
+    display: flex;
+    column-gap: 10px;
+    font-family: "MOB";
+    font-size: 14px;
+    color: white;
+    background: linear-gradient(135deg, #0499dd 0%, #17c1bc 100%);
+    border-radius: 60px;
+    padding: 8px 30px;
+}
