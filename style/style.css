@@ -106,3 +106,494 @@ body {
     border-radius: 60px;
     padding: 8px 30px;
 }
+
+/* ****** FOOTER — style.css oxiriga qo'shing ****** */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.footer {
+    --f-bg: #062a40;
+    --f-text: rgba(255, 255, 255, 0.72);
+    --f-line: rgba(255, 255, 255, 0.12);
+    --f-grad: linear-gradient(135deg, #0499dd 0%, #17c1bc 100%);
+
+    position: relative;
+    margin-top: 80px;
+    background: var(--f-bg);
+    color: var(--f-text);
+    font-family: "MM", sans-serif;
+    overflow-x: clip;
+}
+
+/* --- to'lqinlar --- */
+
+.footer-waves {
+    position: absolute;
+    top: -79px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: block;
+}
+
+.footer-waves__layers > use {
+    animation: footer-wave 22s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.footer-waves__layers > use:nth-child(1) { animation-delay: -2s; animation-duration: 8s; }
+.footer-waves__layers > use:nth-child(2) { animation-delay: -3s; animation-duration: 12s; }
+.footer-waves__layers > use:nth-child(3) { animation-delay: -4s; animation-duration: 16s; }
+.footer-waves__layers > use:nth-child(4) { animation-delay: -5s; animation-duration: 22s; }
+
+@keyframes footer-wave {
+    0%   { transform: translate3d(-90px, 0, 0); }
+    100% { transform: translate3d(85px, 0, 0); }
+}
+
+/* --- yuqori qism --- */
+
+.footer-top {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1.3fr 1.4fr;
+    gap: 40px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.footer-col__title {
+    font-family: "MOB", sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #fff;
+    margin-bottom: 22px;
+}
+
+.footer-brand__logo {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 18px;
+}
+
+.footer-brand__text,
+.footer-news__text {
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 320px;
+}
+
+/* --- ijtimoiy tarmoqlar --- */
+
+.footer-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.footer-social__link {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--f-line);
+    color: #fff;
+    font-size: 18px;
+    transition: transform 0.3s, background 0.3s, border-color 0.3s, color 0.3s;
+}
+
+.footer-social__link:hover {
+    background: var(--f-grad);
+    border-color: transparent;
+    transform: translateY(-5px) rotate(-8deg);
+}
+
+/* --- havolalar --- */
+
+.footer-list {
+    display: grid;
+    gap: 14px;
+}
+
+.footer-list__link,
+.footer-list__text {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--f-text);
+}
+
+.footer-list__link {
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-list__link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1px;
+    background: yellow;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s;
+}
+
+.footer-list__link:hover {
+    color: yellow;
+    transform: translateX(4px);
+}
+
+.footer-list__link:hover::after {
+    transform: scaleX(1);
+}
+
+.footer-list i {
+    color: #17c1bc;
+    width: 16px;
+    text-align: center;
+}
+
+/* --- obuna formasi --- */
+
+.footer-form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    padding: 5px 5px 5px 20px;
+    max-width: 340px;
+    border: 1px solid var(--f-line);
+    border-radius: 60px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.footer-form:focus-within {
+    border-color: #17c1bc;
+    box-shadow: 0 0 0 4px rgba(23, 193, 188, 0.18);
+}
+
+.footer-form__input {
+    flex: 1;
+    min-width: 0;
+    background: none;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-family: "MM", sans-serif;
+    font-size: 14px;
+}
+
+.footer-form__input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-form__btn {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 50%;
+    background: var(--f-grad);
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.footer-form__btn:hover {
+    transform: rotate(18deg) scale(1.08);
+}
+
+/* --- katta yozuv --- */
+
+.footer-wordmark {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    white-space: nowrap;
+    font-family: "MB", sans-serif;
+    font-size: clamp(30px, 9.5vw, 170px);
+    line-height: 0.9;
+    letter-spacing: 1px;
+    user-select: none;
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0.05) 30%, #17c1bc 45%, #ffd700 50%, #0499dd 55%, rgba(255, 255, 255, 0.05) 70%);
+    background-size: 250% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.18);
+    animation: footer-shine 7s linear infinite;
+}
+
+@keyframes footer-shine {
+    0%   { background-position: 150% 0; }
+    100% { background-position: -50% 0; }
+}
+
+/* --- pastki qism --- */
+
+.footer-bottom {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 10px;
+    padding-top: 22px;
+    padding-bottom: 28px;
+    border-top: 1px solid var(--f-line);
+}
+
+.footer-bottom__copy {
+    font-size: 13px;
+}
+
+.footer-bottom__up {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--f-grad);
+    color: #fff;
+    transition: transform 0.3s;
+    animation: footer-float 2.6s ease-in-out infinite;
+}
+
+.footer-bottom__up:hover {
+    transform: scale(1.12);
+}
+
+@keyframes footer-float {
+    0%, 100% { translate: 0 0; }
+    50%      { translate: 0 -6px; }
+}
+
+/* --- klaviatura fokusi --- */
+
+.footer a:focus-visible,
+.footer-form__btn:focus-visible {
+    outline: 2px solid yellow;
+    outline-offset: 3px;
+}
+
+/* --- paydo bo'lish animatsiyasi (JS yoqilgan bo'lsa) --- */
+
+.js-reveal .footer .footer-col {
+    opacity: 0;
+    transform: translateY(28px);
+}
+
+.js-reveal .footer.is-visible .footer-col {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.js-reveal .footer.is-visible .footer-col:nth-child(2) { transition-delay: 0.1s; }
+.js-reveal .footer.is-visible .footer-col:nth-child(3) { transition-delay: 0.2s; }
+.js-reveal .footer.is-visible .footer-col:nth-child(4) { transition-delay: 0.3s; }
+
+/* --- responsive --- */
+
+@media (max-width: 992px) {
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer {
+        margin-top: 60px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-bottom: 36px;
+    }
+
+    .footer-form {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+}
+
+/* --- animatsiyani istamaydiganlar uchun --- */
+
+@media (prefers-reduced-motion: reduce) {
+    .footer *,
+    .footer *::before,
+    .footer *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .js-reveal .footer .footer-col {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* ****** HEADER RESPONSIVE ****** */
+
+@media (max-width: 992px) {
+    .header-left__title {
+        font-size: 52px;
+        margin-bottom: 40px;
+    }
+
+    .header-left__span {
+        position: static;
+        font-size: 36px;
+        margin: 8px 0;
+    }
+
+    .header-left__wspan {
+        font-size: 64px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 60px;
+    }
+
+    .header-nav__minibox {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        padding-top: 24px;
+    }
+
+    .header-minibox__list {
+        flex-wrap: wrap;
+        gap: 10px 16px;
+    }
+
+    .header-box__left {
+        padding-top: 60px;
+    }
+
+    .header-left__title {
+        font-size: 32px;
+        margin-bottom: 32px;
+    }
+
+    .header-left__span {
+        font-size: 22px;
+    }
+
+    .header-left__wspan {
+        font-size: 42px;
+        display: inline-block;
+    }
+}
+
+/* ****** MARKAZLASH VA SIG'DIRISH (kichik ekranlar) ****** */
+
+html, body {
+    overflow-x: hidden;
+}
+
+.header-left__title,
+.header-left__wspan {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 768px) {
+    /* header */
+    .header-nav__minibox {
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-minibox__list {
+        justify-content: center;
+    }
+
+    .header-box__left {
+        text-align: center;
+    }
+
+    .header-left__title {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .header-left__wspan {
+        font-size: clamp(26px, 9vw, 64px);
+        display: inline-block;
+    }
+
+    .header-left__btn {
+        margin: 0 auto;
+    }
+
+    /* footer */
+    .footer-top {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 34px;
+    }
+
+    .footer-brand__text,
+    .footer-news__text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-list {
+        justify-items: center;
+    }
+
+    .footer-list__link,
+    .footer-list__text {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-form {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .footer-bottom {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-left__title {
+        font-size: clamp(24px, 8vw, 32px);
+    }
+
+    .header-left__wspan {
+        font-size: clamp(26px, 9vw, 42px);
+    }
+}

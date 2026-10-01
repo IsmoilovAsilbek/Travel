@@ -8,28 +8,112 @@
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    
-    <header class="header">
-        <nav class="header-nav container">
-            <div class="header-nav__minibox">
-                <img src="image/лого.png" alt="png" class="header-minibox__photo">
-                <ul class="header-minibox__list">
-                    <li><a href="#!" class="header-minibox__link">Главная</a></li>
-                    <li><a href="#!" class="header-minibox__link">Экскурсии</a></li>
-                    <li><a href="#!" class="header-minibox__link">Личный кабинет</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="header-box container">
-            <div class="header-box__left">
-                <h1 class="header-left__title">ПУТЕШЕСТВУЙ <span class="header-left__span">вместе с</span>
-                    <span class="header-left__wspan">PERO TRAVEL</span></h1>
-                <a href="#!" class="header-left__btn">К экскурсиям <span class="header-left__iconspan"><i class="fa-solid fa-arrow-right-long"></i></span></a>
-            </div>
-            <div class="header-box__right">
 
-            </div>
+<header class="header" id="top">
+    <nav class="header-nav container">
+        <div class="header-nav__minibox">
+            <img src="image/лого.png" alt="png" class="header-minibox__photo">
+            <ul class="header-minibox__list">
+                <li><a href="#!" class="header-minibox__link">Главная</a></li>
+                <li><a href="#!" class="header-minibox__link">Экскурсии</a></li>
+                <li><a href="#!" class="header-minibox__link">Личный кабинет</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
+    <div class="header-box container">
+        <div class="header-box__left">
+            <h1 class="header-left__title">ПУТЕШЕСТВУЙ <span class="header-left__span">вместе с</span>
+                <span class="header-left__wspan">PERO TRAVEL</span></h1>
+            <a href="#!" class="header-left__btn">К экскурсиям <span class="header-left__iconspan"><i class="fa-solid fa-arrow-right-long"></i></span></a>
+        </div>
+        <div class="header-box__right">
+
+        </div>
+    </div>
+</header>
+
+<!-- FOOTER: </header> dan keyin, </body> dan oldin qo'ying -->
+<footer class="footer" id="footer">
+
+    <!-- animatsiyali to'lqinlar -->
+    <svg class="footer-waves" viewBox="0 24 150 28" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+            <path id="footer-wave" d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z" />
+        </defs>
+        <g class="footer-waves__layers">
+            <use href="#footer-wave" x="48" y="0" fill="rgba(6, 42, 64, 0.65)" />
+            <use href="#footer-wave" x="48" y="3" fill="rgba(6, 42, 64, 0.45)" />
+            <use href="#footer-wave" x="48" y="5" fill="rgba(6, 42, 64, 0.30)" />
+            <use href="#footer-wave" x="48" y="7" fill="#062a40" />
+        </g>
+    </svg>
+
+    <div class="footer-top container">
+
+        <div class="footer-col footer-brand">
+            <img src="image/лого.png" alt="Pero Travel" class="footer-brand__logo">
+            <p class="footer-brand__text">Экскурсии по всему миру с живыми гидами, понятными маршрутами и честными ценами.</p>
+            <ul class="footer-social">
+                <li><a href="#!" class="footer-social__link" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a></li>
+                <li><a href="#!" class="footer-social__link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#!" class="footer-social__link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#!" class="footer-social__link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3 class="footer-col__title">Навигация</h3>
+            <ul class="footer-list">
+                <li><a href="#!" class="footer-list__link">Главная</a></li>
+                <li><a href="#!" class="footer-list__link">Экскурсии</a></li>
+                <li><a href="#!" class="footer-list__link">Личный кабинет</a></li>
+                <li><a href="#!" class="footer-list__link">Отзывы</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3 class="footer-col__title">Контакты</h3>
+            <ul class="footer-list">
+                <li><a href="tel:+70000000000" class="footer-list__link"><i class="fa-solid fa-phone"></i>+7 000 000 00 00</a></li>
+                <li><a href="mailto:info@perotravel.com" class="footer-list__link"><i class="fa-solid fa-envelope"></i>info@perotravel.com</a></li>
+                <li><span class="footer-list__text"><i class="fa-solid fa-location-dot"></i>Ваш город, ул. Примерная, 1</span></li>
+            </ul>
+        </div>
+
+        <div class="footer-col footer-news">
+            <h3 class="footer-col__title">Скидки на экскурсии</h3>
+            <p class="footer-news__text">Оставьте почту — пришлём новые маршруты и акции.</p>
+            <form class="footer-form" action="#!">
+                <input type="email" class="footer-form__input" placeholder="Ваша почта" aria-label="Ваша почта" required>
+                <button type="submit" class="footer-form__btn" aria-label="Подписаться"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- katta animatsiyali yozuv -->
+    <div class="footer-wordmark" aria-hidden="true">PERO TRAVEL</div>
+
+    <div class="footer-bottom container">
+        <p class="footer-bottom__copy">© 2026 Pero Travel. Все права защищены.</p>
+        <a href="#top" class="footer-bottom__up" aria-label="Наверх"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+
+</footer>
+
+<script>
+    // Footer ko'ringanda bir marta chiroyli paydo bo'ladi
+    (function () {
+        var footer = document.getElementById('footer');
+        if (!footer || !('IntersectionObserver' in window)) return;
+        document.documentElement.classList.add('js-reveal');
+        new IntersectionObserver(function (entries, obs) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) { footer.classList.add('is-visible'); obs.disconnect(); }
+            });
+        }, { threshold: 0.15 }).observe(footer);
+    })();
+</script>
+
 </body>
 </html>
